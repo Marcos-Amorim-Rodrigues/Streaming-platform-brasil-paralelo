@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/package/swiper.min.css">
+    <link rel="stylesheet" href="/package/swiper.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700;900" rel="stylesheet">
+</head>
+<body onresize="AjustarTela()">
+    <header class="topo" id="cabecalho">
+
+        <img src="horizontal.png" width="150px" alt="Logo" class="img" />
+        <div class="logout"><button class="button-39" onclick="sair()">Sair</button></div>
+    </header>
+
+
+    <div id="login-window">
+        <img src="brasilparalelo-black.png" width="100px"/>
+        <p>Digite o seu nome: </p>
+        <input type="text" id="user-login">
+        <p>Digite a sua senha: </p>
+        <input type="password" id="user-senha"></br>
+        <button id="entrarlogin" onclick="entrar()">Entrar</button>
+        <p class="info-text">Este site não tem ligação alguma com a plataforma oficial da Brasil Paralelo, sendo apenas uma versão desenvolvida voluntariamente por um fã.</p>    </div>
+    <div id="plataforma-window">
+        <p>Seja bem-vindo!</p>
+    </div>
+    <div id="videos-plataforma-patriota">
+        <div id="conteudo">
+            <div id="som-da-liberdade">
+                <img src="sdl.jpg" alt="">
+            </div>
+            <div id="som-da-liberdade-content">
+                <h1>Novo filme: Som da Liberdade!</h1>
+                <p> já regastou o seu voucher para assistir o novo filme que está em cartaz no cinema? A Brasil Paralelo proporciona para você o que há de melhor através das telas.</p>
+                <button class="button-40">Quero meu ingresso!</button>
+            </div>
+        </div>
+        <h1>Catálogo BP disponível:</h1>
+        <h3>Últimos conteúdos</h3>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/1964.jpg" class="thumbs" alt=""></div>
+                <div class="swiper-slide"><img src="images/direita.jpg" class="thumbs" alt=""></div>
+                <div class="swiper-slide"><img src="images/entrelobos.jpg" class="thumbs" alt=""></div>
+                <div class="swiper-slide"><img src="images/espiritualidade.jpg" class="thumbs" alt=""></div>
+                <div class="swiper-slide"><img src="images/formacao.jpg" class="thumbs" alt=""></div>
+                <div class="swiper-slide"><img src="images/liberdade.jpg" class="thumbs" alt=""></div>
+                <div class="swiper-slide"><img src="images/metodo.jpg" class="thumbs" alt=""></div>
+                <div class="swiper-slide"><img src="images/oficina.jpg" class="thumbs" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <h3>Recomendados para você</h3>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/original.png" class="thumbs" alt=""></div>
+                <div class="swiper-slide"><img src="images/panorama.jpg" class="thumbs" alt=""></div>
+                <div class="swiper-slide"><img src="images/policia.png" class="thumbs" alt=""></div>
+                <div class="swiper-slide"><img src="images/revolucao.webp" class="thumbs" alt=""></div>
+                <div class="swiper-slide"><img src="images/rouanet.jpg" class="thumbs" alt=""></div>
+                <div class="swiper-slide"><img src="images/travessia.jpg" class="thumbs" alt=""></div>
+                <div class="swiper-slide"><img src="images/venezuela.jpg" class="thumbs" alt=""></div>
+                <div class="swiper-slide"><img src="images/1964.jpg" class="thumbs" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <h3>Sugestões</h3>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/oficina.jpg" class="thumbs" alt=""></div>
+                <div class="swiper-slide"><img src="images/metodo.jpg" class="thumbs" alt=""></div>
+                <div class="swiper-slide"><img src="images/venezuela.jpg" class="thumbs" alt=""></div>
+                <div class="swiper-slide"><img src="images/travessia.jpg" class="thumbs" alt=""></div>
+                <div class="swiper-slide"><img src="images/policia.png" class="thumbs" alt=""></div>
+                <div class="swiper-slide"><img src="images/rouanet.jpg" class="thumbs" alt=""></div>
+                <div class="swiper-slide"><img src="images/espiritualidade.jpg" class="thumbs" alt=""></div>
+                <div class="swiper-slide"><img src="images/formacao.jpg" class="thumbs" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    <div class="banner-novo" id="banner-novo">
+        <div class="banner-content">
+            <h1>Uma jornada de estudos autêntica!</h1>
+            <p>Assista agora ao Travessia e tenha acesso a uma curadoria de professores e temas relevantes numa experiência de ensino desenhada nos mínimos detalhes!</p>
+            <button class="button-40">Assistir agora</button>
+        </div>
+    </div>
+    <footer>
+        <img src="brasilparalelo.png" alt="" width="40px">
+        <p><strong>Brasil paralelo</strong></p>
+        <p>Todos os direitos reservados.</p>
+    </footer>
+    <script src="package/swiper-bundle.js"></script>
+    <script>
+        
+    /*  var nome = window.prompt('Qual seu nome membro?') // vai perguntar o nome
+        var plano = Number.parseFloat(window.prompt('Qual o valor do seu plano?')) //pergunta o valor do plano e converte em número
+        document.write(nome + ', seja muito bem vindo!</br>') //escreve o nome da pessoa e deseja boas vindas
+        document.write(`O plano que você contratou custa ${plano.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</br>`)
+        document.write(`Este plano então é o plano ${plano <= 1500 ? 'Patriota' : (plano > 5000 ? 'Mercenas' : 'Templário')}`) 
+     */
+        var botaologin = window.document.getElementById('entrarlogin')
+        var namelogin = window.document.getElementById('user-login')
+        var telalogin = window.document.getElementById('login-window')
+        var telaplataforma = window.document.getElementById('plataforma-window')
+        var telapatriota = window.document.getElementById('videos-plataforma-patriota')
+        var telabanner = window.document.getElementById('banner-novo')
+        var rodape = window.document.querySelector('footer')
+        var telacabecalho = window.document.getElementById('cabecalho')
+        
+        
+
+
+        function entrar(){
+            telalogin.style.display = 'none';
+            telaplataforma.style.display = 'block';
+            telacabecalho.style.display = 'block';
+            telabanner.style.display = 'flex';
+            rodape.style.display = 'block';
+            telaplataforma.innerHTML = `<p>Seja muito bem-vindo, ${namelogin.value}!</p>`;
+            if(namelogin.value == 'Marcos'){
+                var plano = 'Patriota';
+            } 
+            else {
+                var plano = 'Mercenas';
+            }
+            telaplataforma.innerHTML += `<p>O seu plano é o <strong>${plano}</strong>!</p>`;
+            switch (plano) {
+                case 'Patriota':
+                    telapatriota.style.display = 'block'
+                    break
+                case 'Mercenas':
+                    telapatriota.style.display = 'block'
+                    break
+            }
+        }
+
+        function sair(){
+            telalogin.style.display = 'block';
+            telaplataforma.style.display = 'none';
+            telacabecalho.style.display = 'none';
+            telabanner.style.display = 'none';
+            rodape.style.display = 'none';
+            telapatriota.style.display = 'none';
+        }
+
+
+        var largura = window.screen.width;
+
+        function AjustarTela(){
+            largura = window.screen.width;        
+            slides = largura/266;
+            Math.round(slides);
+            if(slides == 0){
+                slides=slides+1;
+                slides=slides+1;
+            }
+            else if(slides < 2){
+                slides=slides+1;
+            }
+
+            swiper = new Swiper('.swiper', {
+                slidesPerView: slides-1,
+                spaceBetween: 266,
+                slidesPerGroup: 1,
+                navigation:{
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        }
+
+        AjustarTela();
+        window.addEventListener("AjustarTela", updateSize);
+
+        var slides = largura/266;
+        var swiper = new Swiper('.swiper', {
+            slidesPerView: slides-1,
+            spaceBetween: 0,
+            slidesPerGroup: 1,
+            navigation:{
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+    </script>
+</body>
+</html>
